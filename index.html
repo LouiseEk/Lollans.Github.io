@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+		<title>Swedish fashion</title>
+
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="fshn.css"/>
+
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+</head>
+
+
+<body>
+	<br>
+
+<div class="header">
+    <img class="banner" src="file:///Users/louiseek/Desktop/ms.jpg">
+  </div>
+<br>
+
+	<p style=" font-size: 45px; color: steelblue;"><strong>Numbers and facts about the Swedish fashion and textile industry</strong></p>
+	<br>
+	<br>
+
+		<div class="ct-chart"></div>
+			<script src="fshn.js">
+			</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<p style="color: darkcyan; font-size: 30px">
+	In the year of 2014, the turnover of the Swedish fashion
+	industry was 264 billion SEK in total. The export vs. sales on the Swedish market was there by 65 % vs. 35%, which equals 173 billion SEK and SEK.	</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<div class="img1">
+	<img class="img2" src="file:///Users/louiseek/Desktop/a.jpg"/>
+	</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<div class="ct-chart2"></div>
+			<script src="fshn.js">
+			</script>
+
+
+	<p style="color: darkcyan; font-size: 30px">The fashion and textile industris is overall a women dominated industri with 80% women as employees and 20% men. </p>
+
+	<p style="color: darkcyan; font-size: 30px">The CEO positions tho, are mostly held by men, with the numbers of 70% men and 30% women. "Why the hell is that", one might wonder? </p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<div class="img3">
+	<img class="img4" src="file:///Users/louiseek/Desktop/f.jpg"/>
+	</div>
+
+	<p style="color: darkcyan; font-size: 20px">Source: The Swedish Textile & Fashion company  https://www.teko.se/ </p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	</body>
+
+</html> 
+
+new Chartist.Pie('.ct-chart', {
+  series: [65, 35]
+}, {
+  donut: true,
+  donutWidth: 120,
+  startAngle: 0,
+  total: 100,
+  showLabel: false
+});
+
+
+
+var data = {
+  series: [5, 3]
+};
+
+var sum = function(a, b) { return a + b };
+
+new Chartist.Pie('.ct-chart2', data, {
+  labelInterpolationFnc: function(value) {
+    return Math.round(value / data.series.reduce(sum) * 100) + '%';
+  }
+});
+
+
+.banner
+{width: 100%}
+
+.banner
+ {opacity: 0.75;}
+
+.ct-chart {height: 500px;
+	width: 500px;
+
+	margin-left: 80px;
+	margin-right: 80px;
+
+	float: left;}
+
+p 	{font-family: 'Slabo 27px', serif;
+	color: dimgrey;
+	font-size: 20px;}
+
+.ct-label
+	{font-size: 20px;}
+
+.ct-series-a .ct-slice-donut 
+	{stroke: lightblue;}
+
+.ct-series-b .ct-slice-donut 
+	{stroke: lightseagreen;}
+
+p 	{margin-top: 80px;
+	margin-left: 80px;
+	margin-right: 80px;}
+
+.img2
+{width: 800px;
+margin-top: 80px;
+border-radius: 20px;
+display: block;
+    margin: auto;
+    width: 50%;
+position: center;}
+
+
+.ct-chart2 
+	{height: 500px;
+	width: 500px;
+
+	margin-left: 80px;
+	margin-right: 80px;
+
+	float: right;
+
+font-size: 40px;}
+
+.ct-series-a .ct-slice-pie {
+  fill: slategrey;}
+
+.ct-series-b .ct-slice-pie {
+  fill: lightsteelblue;}
+
+
+.img4
+{width: 800px;
+margin-top: 80px;
+display: block;
+    margin: auto;
+    width: 50%;
+position: center;
+
+border: 4px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;}
+
+
+
+
+
+
+
+
+
+
+
